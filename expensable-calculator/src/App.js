@@ -79,9 +79,10 @@ function App() {
   return (
     <div>
       <Calculator>
+        
         <Header>Este es un header</Header>
         <Result>$ {prevNumber} {operant} {currentNumber}</Result>
-
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         <Button type="submit" value={1} onClick={(e)=>{handleClick(e)}}/>
         <Button type="submit" value={2} onClick={(e)=>{handleClick(e)}}/>
         <Button type="submit" value={3} onClick={(e)=>{handleClick(e)}}/>
@@ -92,15 +93,15 @@ function App() {
         <Button type="submit" value={8} onClick={(e)=>{handleClick(e)}}/>
         <Button type="submit" value={9} onClick={(e)=>{handleClick(e)}}/>
         <Button type="submit" value={0} onClick={(e)=>{handleClick(e)}}/>
-        <hr/>
         <Button type="submit" value={"+"} onClick={(e)=>{handleOperator(e)}}/>
         <Button type="submit" value={"-"} onClick={(e)=>{handleOperator(e)}}/>
         <Button type="submit" value={"*"} onClick={(e)=>{handleOperator(e)}}/>
         <Button type="submit" value={"/"} onClick={(e)=>{handleOperator(e)}}/>
-        <hr/>
         <Button type="submit" value={renderEnter(operant)} onClick={(e)=>{handleEqual(e)}}/>
         <Button type="submit" value={"<:"} onClick={(e)=>{handleDelete(e)}}/>
         <Button type="submit" value={"C"} onClick={(e)=>{handleClear(e)}}/>
+        </div>
+        
       </Calculator>
     </div>
   );

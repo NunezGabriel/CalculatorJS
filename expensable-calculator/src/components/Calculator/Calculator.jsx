@@ -6,6 +6,8 @@ function Calculator({children}){
         height: 333px;
         width: 256px;
         background-color: white;
+        display: flex;
+        flex-direction: column;
     `}>{children}</div>
 }
 
