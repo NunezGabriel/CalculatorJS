@@ -11,6 +11,10 @@ function Result({ children }) {
         background-color: white;
         margin: 0 auto;
         box-sizing: border-box;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: center;
       `}
     >
       {children}

@@ -11,7 +11,6 @@ function Header({ children, color, icon }) {
         color: white;
         font-weight: 800;
         margin: 0 auto;
-        icon: ${icon};
       `}
     >
       {children}

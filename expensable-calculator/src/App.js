@@ -6,6 +6,8 @@ import Button from "./components/Button/Button";
 import Result from "./components/Result/Result";
 import Header from "./components/Header/Header";
 import shop from "./img/icons/shop.svg";
+import eliminated from "./img/icons/eliminated.svg";
+import react from "./img/icons/react.svg";
 
 function App({ name, color, icon }) {
   const [prevNumber, setPrevNumber] = useState(null);
@@ -72,7 +74,7 @@ function App({ name, color, icon }) {
     setFlag(true);
   }
   function renderEnter(operant) {
-    return operant ? "=" : "#";
+    return operant ? "=" : "✓";
   }
   return (
     <div>
@@ -199,7 +201,7 @@ function App({ name, color, icon }) {
           />
           <Button
             type="submit"
-            value={"*"}
+            value={"×"}
             color={"#F3F4F6"}
             area={"ba"}
             onClick={(e) => {
@@ -208,7 +210,7 @@ function App({ name, color, icon }) {
           />
           <Button
             type="submit"
-            value={"/"}
+            value={"÷"}
             color={"#F3F4F6"}
             area={"aa"}
             onClick={(e) => {
@@ -217,6 +219,7 @@ function App({ name, color, icon }) {
           />
           <Button
             type="submit"
+            textcolor={"white"}
             value={renderEnter(operant)}
             color={color}
             area={"ce"}
@@ -224,17 +227,24 @@ function App({ name, color, icon }) {
               handleEqual(e);
             }}
           />
-          <Button
-            type="submit"
-            value={"<:"}
+          <div
             area={"ae"}
             onClick={(e) => {
               handleDelete(e);
             }}
-          />
+            css={css`
+              display: flex;
+              place-items: center;
+              padding-left: 14px;
+              background: white;
+            `}
+          >
+            <img src={eliminated} />
+          </div>
           <Button
             type="submit"
             value={"C"}
+            fontSize={"15px"}
             area={"be"}
             onClick={(e) => {
               handleClear(e);
@@ -248,14 +258,18 @@ function App({ name, color, icon }) {
               handleClick(e);
             }}
           />
-          <Button
-            type="submit"
+          <div
             value={""}
             area={"db"}
-            onClick={(e) => {
-              handleClick(e);
-            }}
-          />
+            css={css`
+              display: flex;
+              place-items: center;
+              padding-left: 14px;
+              background: white;
+            `}
+          >
+            <img src={react} />
+          </div>
         </div>
       </Calculator>
     </div>

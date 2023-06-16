@@ -1,7 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
-function Button({ type, value, onClick, area, color }) {
+function Button({
+  type,
+  value,
+  onClick,
+  area,
+  color,
+  fontSize,
+  textcolor,
+  icon,
+}) {
   return (
     <input
       type={type}
@@ -15,12 +24,14 @@ function Button({ type, value, onClick, area, color }) {
         grid-area: ${area};
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
+        font-size: ${fontSize ? fontSize : "20px"};
         line-height: 28px;
         text-align: center;
-        color: #4b5563;
+        color: ${textcolor ? textcolor : "#4B5563"};
         border: none;
         gap: 5px;
+        background-image: ${icon ? icon : ""};
+        background-size: cover;
       `}
     />
   );
