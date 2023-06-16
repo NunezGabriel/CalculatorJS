@@ -80,9 +80,51 @@ function App({ name, color, icon }) {
     <div>
       <Calculator>
         <Header color={color}>
-          {name}
-          <div>
-            <img src={shop} />
+          <div
+            css={css`
+              display: flex;
+              gap: 8px;
+            `}
+          >
+            <div
+              css={css`
+                border-radius: 50%;
+                background-color: white;
+                width: 33px;
+                height: 33px;
+                display: flex;
+                place-items: center;
+              `}
+            >
+              <img
+                src={shop}
+                css={css`
+                  margin-left: 6px;
+                `}
+              />
+            </div>
+            <div>
+              <p
+                css={css`
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 12px;
+                  line-height: 16px;
+                `}
+              >
+                Add expense to
+              </p>
+              <p
+                css={css`
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 24px;
+                `}
+              >
+                {name}
+              </p>
+            </div>
           </div>
         </Header>
         <Result>

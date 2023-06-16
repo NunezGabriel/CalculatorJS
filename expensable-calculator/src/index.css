@@ -7,3 +7,6 @@ body {
   line-height: 24px;
   color: #4b5563;
 }
+p {
+  margin: 0;
+}
