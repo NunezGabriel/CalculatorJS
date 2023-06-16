@@ -32,6 +32,10 @@ function Button({
         gap: 5px;
         background-image: ${icon ? icon : ""};
         background-size: cover;
+        transition: 0.5s;
+        &: hover {
+          background-color: #06b6d4;
+        }
       `}
     />
   );
