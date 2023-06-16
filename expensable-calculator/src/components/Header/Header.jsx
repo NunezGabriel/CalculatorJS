@@ -1,17 +1,22 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
-function Header({children}){
-    return <header css={
-        css`
+function Header({ children, color, icon }) {
+  return (
+    <header
+      css={css`
         height: 50px;
         width: 100%;
-        background-color: #06B6D4;
+        background-color: ${color};
         color: white;
         font-weight: 800;
         margin: 0 auto;
-       
-    `}>{children}</header>
+        icon: ${icon};
+      `}
+    >
+      {children}
+    </header>
+  );
 }
 
-export default Header
+export default Header;
