@@ -59,12 +59,12 @@ function App({ name, color, icon }) {
         setCurrentNumber(result);
         break;
 
-      case "*":
+      case "×":
         result = +prevNumber * +(currentNumber || prevNumber);
         setCurrentNumber(result);
         break;
 
-      case "/":
+      case "÷":
         result = +prevNumber / +(currentNumber || prevNumber);
         setCurrentNumber(result);
         break;
@@ -77,7 +77,7 @@ function App({ name, color, icon }) {
     return operant ? "=" : "✓";
   }
   return (
-    <div>
+    <div css={css``}>
       <Calculator>
         <Header color={color}>
           <div
