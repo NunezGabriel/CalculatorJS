@@ -1,4 +1,4 @@
-# Expensable Calculator
+# Calculator
 
 ![https://p-vvf5mjm.t4.n0.cdn.getcloudapp.com/items/o0uRBL95/ff24a0f9-54f6-4041-8611-f61e8e3df91a.png?source=viewer&v=bfbe9648296a127e35a40371dc20ed5a](https://p-vvf5mjm.t4.n0.cdn.getcloudapp.com/items/o0uRBL95/ff24a0f9-54f6-4041-8611-f61e8e3df91a.png?source=viewer&v=bfbe9648296a127e35a40371dc20ed5a)
 
